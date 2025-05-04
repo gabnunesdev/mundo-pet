@@ -1,0 +1,44 @@
+:root {
+  /* Content */
+  --content-primary: #ffffff;
+  --content-secondary: #98959d;
+  --content-tertiary: #666666;
+  --content-brand: #9282fa;
+
+  /* Background */
+  --background-primary: #151515;
+  --background-secondary: #1e1e1e;
+  --background-tertiary: #23242c;
+  --background-brand: #9282fa;
+  --background-highlights: #bdb4fa;
+
+  /* Border */
+  --border-primary: #3e3c41;
+  --border-secondary: #86818c;
+  --border-brand: #9282fa;
+  --border-divisor: #353339;
+
+  /* Accent */
+  --accent-blue: #027df0;
+  --accent-blue-light: #16487a;
+  --accent-yellow: #f0dc02;
+  --accent-yellow-light: #756e1b;
+  --accent-orange: #f09102;
+  --accent-orange-light: #75501b;
+
+  /* Fonte */
+
+  /* Inter Tight */
+  --font-title: 700 24px/32px "Inter Tight", sans-serif;
+
+  /* Inter */
+  --font-paragraph-medium: 500 14px/24px "Inter", sans-serif;
+  --font-paragraph-small: 500 12px/16px "Inter", sans-serif;
+
+  --font-label-large: 700 16px/24px "Inter", sans-serif;
+  --font-label-medium: 700 14px/24px "Inter", sans-serif;
+  --font-label-small: 700 12px/16px "Inter", sans-serif;
+
+  --font-link: 500 12px/16px "Inter", sans-serif;
+}
+
