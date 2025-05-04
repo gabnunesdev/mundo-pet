@@ -15,6 +15,7 @@
   </head>
   <body>
     <div class="container">
+      <img src="./src/assets/logo.svg" alt="" />
       <div class="main">
         <header>
           <div class="title">
@@ -25,11 +26,77 @@
             </p>
           </div>
           <div class="date-field">
-            <img src="" alt="">
+            <img src="./src/assets/calendar.svg" alt="Ícone de calendário" />
+            <input type="date" name="date" id="date" />
           </div>
-
         </header>
+        <aside class="schedule">
+          <section class="schedule-period">
+            <header>
+              <img src="./src/assets/sun.svg" alt="Manhã" />
+              <strong>Manhã</strong>
+              <span>09h-12h</span>
+            </header>
+            <ul id="period-morning" class="period">
+              <!-- Exemplo  -->
+              <li>
+                <strong>09:00</strong>
+                <div class="pet-info">
+                  <strong>Thor</strong>
+                  <span>/</span>
+                  <span>Fernanda Costa</span>
+                </div>
+                <span>Vacinação</span>
+                <span>Remover agendamento</span>
+              </li>
+            </ul>
+          </section>
+          <section class="schedule-period">
+            <header>
+              <img
+                src="./src/assets/afternoon-sun.svg"
+                alt="Ícone de sol a tarde"
+              />
+              <strong>Tarde</strong>
+              <span>13h-18h</span>
+            </header>
+            <ul id="period-afternoon" class="period">
+              <!-- Exemplo  -->
+              <li>
+                <strong>13:00</strong>
+                <div class="pet-info">
+                  <strong>Mel</strong>
+                  <span>/</span>
+                  <span>João Souza</span>
+                </div>
+                <span>Corte de Unhas</span>
+                <span>Remover agendamento</span>
+              </li>
+            </ul>
+          </section>
+          <section class="schedule-period">
+            <header>
+              <img src="./src/assets/moon-stars.svg" alt="Manhã" />
+              <strong>Noite</strong>
+              <span>19h-21h</span>
+            </header>
+            <ul id="period-night" class="period">
+              <!-- Exemplo  -->
+              <li>
+                <strong>20:00</strong>
+                <div class="pet-info">
+                  <strong>Max</strong>
+                  <span>/</span>
+                  <span>Camila Santos</span>
+                </div>
+                <span>Limpeza de Dentes</span>
+                <span>Remover agendamento</span>
+              </li>
+            </ul>
+          </section>
+        </aside>
       </div>
+      <button>Novo agendamento</button>
     </div>
   </body>
 </html>

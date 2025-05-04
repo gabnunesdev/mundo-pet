@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   /* Content */
   --content-primary: #ffffff;
@@ -42,3 +48,7 @@
   --font-link: 500 12px/16px "Inter", sans-serif;
 }
 
+body {
+  background-color: var(--background-tertiary);
+  color: #f5f4f5;
+}
