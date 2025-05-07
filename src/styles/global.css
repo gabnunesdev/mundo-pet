@@ -12,7 +12,7 @@
   --content-brand: #9282fa;
 
   /* Background */
-  --background-primary: #151515;
+  --background-primary: #14151d;
   --background-secondary: #1e1e1e;
   --background-tertiary: #23242c;
   --background-brand: #9282fa;
@@ -41,7 +41,7 @@
   --font-paragraph-medium: 500 14px/24px "Inter", sans-serif;
   --font-paragraph-small: 500 12px/16px "Inter", sans-serif;
 
-  --font-label-large: 700 16px/24px "Inter", sans-serif;
+  --font-label-large: 700 16px/24px "Inter Tight", sans-serif;
   --font-label-medium: 700 14px/24px "Inter", sans-serif;
   --font-label-small: 700 12px/16px "Inter", sans-serif;
 
@@ -49,6 +49,25 @@
 }
 
 body {
-  background-color: var(--background-tertiary);
+  background-color: var(--background-primary);
   color: #f5f4f5;
+  position: relative;
+}
+
+ul {
+  list-style: none;
+}
+
+.logo {
+  max-width: 9.5625rem;
+  padding: 0.75rem 1.25rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--background-tertiary);
+  border-radius: 0 0 20px 0;
+}
+
+strong {
+  color: var(--content-primary);
 }

@@ -1,0 +1,72 @@
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.schedule-period {
+  background-color: var(--background-tertiary);
+  border-radius: 0.625rem;
+}
+
+.schedule-period header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid var(--border-divisor);
+  padding: 0.75rem 1.25rem;
+}
+
+.schedule-period header .period-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.schedule-period header .period-header strong {
+  font: var(--font-label-large);
+}
+
+.schedule-period header span {
+  font: var(--font-label-large);
+  color: var(--content-secondary);
+}
+
+.schedule .period {
+  display: flex;
+  margin: 20px 20px;
+}
+
+.schedule .period li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.schedule .period li strong {
+  font: var(--font-label-small);
+}
+
+.schedule .period li p {
+  font: var(--font-paragraph-small);
+  color: var(--content-secondary);
+}
+
+.schedule .pet-info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.schedule .pet-info span {
+  color: var(--content-secondary);
+}
+
+.schedule .period li span:nth-child(4) {
+  font: var(--font-paragraph-small);
+  color: var(--content-tertiary);
+  cursor: pointer;
+}
