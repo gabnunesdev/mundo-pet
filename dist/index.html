@@ -11,12 +11,12 @@
       rel="stylesheet"
     />
     <title>Mundo Pet</title>
-    <link rel="icon" href="logo.svg" />
-    <script defer src="main.js"></script>
-  </head>
+  <link rel="icon" href="logo.svg"><script defer src="main.js"></script></head>
   <body>
-    <div class="container">
+    <div class="logo">
       <img src="./src/assets/logo.svg" alt="" />
+    </div>
+    <div class="container">
       <div class="main">
         <header>
           <div class="title">
@@ -28,16 +28,21 @@
           </div>
           <div class="date-field">
             <img src="./src/assets/calendar.svg" alt="Ícone de calendário" />
-            <input type="date" name="date" id="date" />
+            <input type="date" name="date" id="date" value="2025-05-06" />
           </div>
         </header>
+
         <aside class="schedule">
           <section class="schedule-period">
             <header>
-              <img src="./src/assets/sun.svg" alt="Manhã" />
-              <strong>Manhã</strong>
+              <div class="period-header">
+                <img src="./src/assets/sun.svg" alt="Manhã" />
+                <strong>Manhã</strong>
+              </div>
+
               <span>09h-12h</span>
             </header>
+
             <ul id="period-morning" class="period">
               <!-- Exemplo  -->
               <li>
@@ -45,20 +50,23 @@
                 <div class="pet-info">
                   <strong>Thor</strong>
                   <span>/</span>
-                  <span>Fernanda Costa</span>
+                  <p>Fernanda Costa</p>
                 </div>
-                <span>Vacinação</span>
+                <p>Vacinação</p>
                 <span>Remover agendamento</span>
               </li>
             </ul>
           </section>
+
           <section class="schedule-period">
             <header>
-              <img
-                src="./src/assets/afternoon-sun.svg"
-                alt="Ícone de sol a tarde"
-              />
-              <strong>Tarde</strong>
+              <div class="period-header">
+                <img
+                  src="./src/assets/afternoon-sun.svg"
+                  alt="Ícone de sol a tarde"
+                />
+                <strong>Tarde</strong>
+              </div>
               <span>13h-18h</span>
             </header>
             <ul id="period-afternoon" class="period">
@@ -68,17 +76,20 @@
                 <div class="pet-info">
                   <strong>Mel</strong>
                   <span>/</span>
-                  <span>João Souza</span>
+                  <p>João Souza</p>
                 </div>
-                <span>Corte de Unhas</span>
+                <p>Corte de Unhas</p>
                 <span>Remover agendamento</span>
               </li>
             </ul>
           </section>
+
           <section class="schedule-period">
             <header>
-              <img src="./src/assets/moon-stars.svg" alt="Manhã" />
-              <strong>Noite</strong>
+              <div class="period-header">
+                <img src="./src/assets/moon-stars.svg" alt="Manhã" />
+                <strong>Noite</strong>
+              </div>
               <span>19h-21h</span>
             </header>
             <ul id="period-night" class="period">
@@ -88,9 +99,9 @@
                 <div class="pet-info">
                   <strong>Max</strong>
                   <span>/</span>
-                  <span>Camila Santos</span>
+                  <p>Camila Santos</p>
                 </div>
-                <span>Limpeza de Dentes</span>
+                <p>Limpeza de Dentes</p>
                 <span>Remover agendamento</span>
               </li>
             </ul>
@@ -98,6 +109,6 @@
         </aside>
       </div>
     </div>
-    <button type="menu">Novo agendamento</button>
+    <button>Novo agendamento</button>
   </body>
 </html>

@@ -1,7 +1,29 @@
 .container {
-  max-width: 54.4375rem;
+  width: 54.4375rem;
+  display: flex;
+  flex-direction: column;
 
   margin: 0 auto;
 
   padding: 5rem;
+
+  position: relative;
 }
+
+#btn-newschedule {
+  all: unset;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--content-brand);
+  font: var(--font-label-large);
+  color: #050505;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 40px 0 rgba(146, 130, 250, 0.3);
+  margin-top: 20px;
+}
+
+#btn-newschedule:hover {
+  box-shadow: 0 0 40px 0 rgba(146, 130, 250);
+  transition: 0.3s ease-out;
+}
+

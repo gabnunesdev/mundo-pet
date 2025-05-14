@@ -1,0 +1,126 @@
+dialog {
+  border: none;
+  padding: 2.5rem;
+  border-radius: 0.75rem;
+  max-width: 29.8125rem;
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--background-tertiary);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  gap: 1.75rem;
+}
+
+form img {
+  width: fit-content;
+  max-width: 20px;
+  height: auto;
+}
+
+form header .title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+form header .title h1 {
+  font: var(--font-title);
+  color: var(--content-primary);
+}
+
+form header .title p {
+  color: var(--content-secondary);
+  font: var(--font-paragraph-medium);
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: none;
+}
+
+fieldset .input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+fieldset .input-wrapper label {
+  font: var(--font-label-medium);
+  color: var(--content-primary);
+}
+
+fieldset .input-wrapper input[type="text"] {
+  all: unset;
+}
+
+fieldset .input-wrapper .input-section textarea {
+  all: unset;
+}
+
+fieldset .input-wrapper .input-section {
+  display: flex;
+  flex-direction: row;
+  padding: 12px;
+  align-items: center;
+
+  border: 1px solid var(--border-primary);
+  border-radius: 0.5rem;
+
+  font: 400 1rem/1.5 "Inter", sans-serif;
+
+  position: relative;
+}
+
+fieldset .input-wrapper input[type="text"] {
+  margin-left: 0.5rem;
+}
+
+fieldset .date {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  position: relative;
+}
+
+input[type="time"],
+input[type="date"] {
+  background: none;
+  border: none;
+  outline: none;
+  font: 400 1rem/1.5 "Inter", sans-serif;
+}
+
+fieldset .date input[type="time"] {
+  margin-left: 0.5rem;
+  color: var(--content-secondary);
+}
+
+fieldset .date input[type="date"] {
+  margin-left: 0.5rem;
+  color: var(--content-secondary);
+}
+
+input[type="date"] {
+  width: 100%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+
+
+.arrow-icon {
+  position: absolute;
+  max-height: 1.25rem;
+  right: 8px;
+}

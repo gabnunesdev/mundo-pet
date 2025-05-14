@@ -28,7 +28,7 @@
           </div>
           <div class="date-field">
             <img src="./src/assets/calendar.svg" alt="Ícone de calendário" />
-            <input type="date" name="date" id="date" value="2025-05-06" />
+            <input type="date" name="date" id="date" />
           </div>
         </header>
 
@@ -46,11 +46,13 @@
             <ul id="period-morning" class="period">
               <!-- Exemplo  -->
               <li>
-                <strong>09:00</strong>
                 <div class="pet-info">
-                  <strong>Thor</strong>
-                  <span>/</span>
-                  <p>Fernanda Costa</p>
+                  <strong>09:00</strong>
+                  <div class="pet-names">
+                    <strong>Thor</strong>
+                    <span>/</span>
+                    <p>Fernanda Costa</p>
+                  </div>
                 </div>
                 <p>Vacinação</p>
                 <span>Remover agendamento</span>
@@ -72,11 +74,13 @@
             <ul id="period-afternoon" class="period">
               <!-- Exemplo  -->
               <li>
-                <strong>13:00</strong>
                 <div class="pet-info">
-                  <strong>Mel</strong>
-                  <span>/</span>
-                  <p>João Souza</p>
+                  <strong>13:00</strong>
+                  <div class="pet-names">
+                    <strong>Mel</strong>
+                    <span>/</span>
+                    <p>João Souza</p>
+                  </div>
                 </div>
                 <p>Corte de Unhas</p>
                 <span>Remover agendamento</span>
@@ -95,20 +99,119 @@
             <ul id="period-night" class="period">
               <!-- Exemplo  -->
               <li>
-                <strong>20:00</strong>
                 <div class="pet-info">
-                  <strong>Max</strong>
-                  <span>/</span>
-                  <p>Camila Santos</p>
+                  <strong>20:00</strong>
+                  <div class="pet-names">
+                    <strong>Max</strong>
+                    <span>/</span>
+                    <p>Camila Santos</p>
+                  </div>
                 </div>
                 <p>Limpeza de Dentes</p>
                 <span>Remover agendamento</span>
               </li>
             </ul>
           </section>
+          <button id="btn-newschedule">Novo agendamento</button>
         </aside>
       </div>
     </div>
-    <button>Novo agendamento</button>
+
+    <dialog>
+      <form>
+        <header>
+          <div class="title">
+            <h1>Agende um atendimento</h1>
+            <p>Preencha os dados do cliente para realizar o agendamento:</p>
+          </div>
+        </header>
+
+        <fieldset>
+          <div class="input-wrapper">
+            <label for="tutor-name">Nome do tutor</label>
+            <section class="input-section">
+              <img src="./src/assets/user.svg" alt="Ícone de usuário" />
+              <input
+                type="text"
+                name="tutor"
+                id="tutor-name"
+                placeholder="Helena Souza"
+              />
+            </section>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="pet-name">Nome do pet</label>
+            <section class="input-section">
+              <img src="./src/assets/pet-paw.svg" alt="Ícone de pet" />
+              <input
+                type="text"
+                name="pet"
+                id="pet-name"
+                placeholder="Cheddar"
+              />
+            </section>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="phone">Telefone</label>
+            <section class="input-section">
+              <img src="./src/assets/phone.svg" alt="" />
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="(00) 0 0000-0000"
+              />
+            </section>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="service-description">Descrição do serviço</label>
+            <section class="input-section">
+              <textarea
+                name="service-description"
+                id="service-description"
+                placeholder="Banho e tosa"
+              ></textarea>
+            </section>
+          </div>
+
+          <div class="input-wrapper date">
+            <div class="date-wrapper">
+              <label for="input-date">Data</label>
+              <section class="input-section">
+                <img
+                  src="./src/assets/calendar.svg"
+                  alt="Ícone de calendário"
+                />
+                <input type="date" name="input-date" id="input-date" />
+                <span class="arrow-icon">
+                  <img src="./src/assets/arrow-down.svg" alt="" />
+                </span>
+              </section>
+            </div>
+
+            <div class="hour-wrapper">
+              <label for="input-hour">Hora</label>
+              <section class="input-section">
+                <img src="./src/assets/clock.svg" alt="Ícone de relógio" />
+                <input
+                  type="time"
+                  name="input-hour"
+                  id="input-hour"
+                  value="12:00"
+                />
+                <span class="arrow-icon">
+                  <img src="./src/assets/arrow-down.svg" alt="" />
+                </span>
+              </section>
+            </div>
+          </div>
+        </fieldset>
+
+        <button type="submit" id="btn-schedule">AGENDAR</button>
+      </form>
+    </dialog>
   </body>
 </html>

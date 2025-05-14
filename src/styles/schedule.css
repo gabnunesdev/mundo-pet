@@ -1,6 +1,7 @@
 .schedule {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 0.75rem;
   margin-top: 2rem;
 }
@@ -8,13 +9,14 @@
 .schedule-period {
   background-color: var(--background-tertiary);
   border-radius: 0.625rem;
+  width: 100%;
 }
 
 .schedule-period header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  border-bottom: 2px solid var(--border-divisor);
+  border-bottom: 1px solid var(--border-divisor);
   padding: 0.75rem 1.25rem;
 }
 
@@ -35,15 +37,14 @@
 }
 
 .schedule .period {
-  display: flex;
-  margin: 20px 20px;
+  padding: 1.25rem;
 }
 
 .schedule .period li {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  gap: 1rem;
+  padding: 0.75rem;
 }
 
 .schedule .period li strong {
@@ -55,18 +56,30 @@
   color: var(--content-secondary);
 }
 
+.schedule .period li p:nth-child(2) {
+  justify-self: left;
+}
+
 .schedule .pet-info {
   display: flex;
-  align-items: center;
+
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.schedule .pet-names {
+  display: flex;
   gap: 4px;
+  width: 100%;
 }
 
 .schedule .pet-info span {
   color: var(--content-secondary);
 }
 
-.schedule .period li span:nth-child(4) {
+.schedule .period li span:nth-child(3) {
   font: var(--font-paragraph-small);
   color: var(--content-tertiary);
   cursor: pointer;
+  justify-self: end;
 }
