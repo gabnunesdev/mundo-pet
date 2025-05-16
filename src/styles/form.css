@@ -15,6 +15,7 @@ form {
   display: flex;
   flex-direction: column;
   margin-inline: auto;
+  align-items: flex-end;
   gap: 1.75rem;
 }
 
@@ -113,14 +114,41 @@ input[type="date"] {
   width: 100%;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;
+form input[type="time"] {
+  width: 100%;
 }
 
-
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  z-index: 1;
+}
 
 .arrow-icon {
   position: absolute;
   max-height: 1.25rem;
   right: 8px;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  z-index: 1;
+}
+
+form button {
+  all: unset;
+  cursor: pointer;
+
+  padding: 0.75rem 1.5rem;
+  background-color: var(--content-brand);
+  border-radius: 0.5rem;
+
+  font: var(--font-label-large);
+  color: #050505;
+
+  box-shadow: 0 0 40px 0 rgba(146, 130, 250, 0.3);
+}
+
+form button:hover {
+  box-shadow: 0 0 40px 0 rgba(146, 130, 250, 0.411);
+  transition: 0.3s ease-out;
 }

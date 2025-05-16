@@ -19,20 +19,22 @@
   color: var(--content-secondary);
 }
 
-input[type="date"] {
-  all: unset;
-}
-
-.main .date-field {
+.main .input-section {
   display: flex;
-  justify-content: center;
-  max-width: 10.75rem;
-  gap: 0.25rem;
-  color: var(--content-secondary);
-  font: 400 1rem/1.5 "Inter", sans-serif;
-  padding: 12px 12px 12px 12px;
+  flex-direction: row;
+  padding: 12px;
+  align-items: center;
+
   border: 1px solid var(--border-primary);
   border-radius: 0.5rem;
+
+  font: 400 1rem/1.5 "Inter", sans-serif;
+  color: var(--content-primary);
+
   position: relative;
 }
 
+.main input[type="date"] {
+  margin-left: 0.5rem;
+  color: var(--content-secondary);
+}
