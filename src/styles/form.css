@@ -65,6 +65,7 @@ fieldset .input-wrapper input[type="text"] {
 
 fieldset .input-wrapper .input-section textarea {
   all: unset;
+  color: var(--content-primary);
 }
 
 fieldset .input-wrapper .input-section {
@@ -83,6 +84,7 @@ fieldset .input-wrapper .input-section {
 
 fieldset .input-wrapper input[type="text"] {
   margin-left: 0.5rem;
+  color: var(--content-primary);
 }
 
 fieldset .date {
