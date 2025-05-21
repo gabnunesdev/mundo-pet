@@ -15,3 +15,4 @@ import "./styles/main-container.css";
 //JS
 import "./form.js";
 import "./modules/form/submit.js";
+import "./modules/page-load.js";

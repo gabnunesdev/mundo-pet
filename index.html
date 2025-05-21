@@ -30,9 +30,6 @@
             <section class="input-section">
               <img src="./src/assets/calendar.svg" alt="Ícone de calendário" />
               <input type="date" name="input-date" id="input-date" />
-              <span class="arrow-icon">
-                <img src="./src/assets/arrow-down.svg" alt="" />
-              </span>
             </section>
           </header>
 
@@ -182,40 +179,39 @@
             </section>
           </div>
 
-          <div class="input-wrapper date">
-            <div class="date-wrapper">
-              <label for="input-date">Data</label>
-              <section class="input-section">
+          <div class="date-wrapper">
+
+            <div class="date-inner">
+              <label for="form-date">Data</label>
+              <section class="date-section">
                 <img
                   src="./src/assets/calendar.svg"
                   alt="Ícone de calendário"
                 />
-                <input type="date" name="input-date" id="input-date" />
-                <span class="arrow-icon">
-                  <img src="./src/assets/arrow-down.svg" alt="" />
-                </span>
+                <input type="date" name="date" id="form-date" />
               </section>
             </div>
 
-            <div class="hour-wrapper">
+            <div class="hour-inner">
               <label for="input-hour">Hora</label>
-              <section class="input-section">
+              <section class="hour-section">
                 <img src="./src/assets/clock.svg" alt="Ícone de relógio" />
                 <input
-                  type="time"
-                  name="input-hour"
-                  id="input-hour"
-                  value="12:00"
+                  type="text"
+                  id="input-section"
+                  placeholder="12:00"
+                  autocomplete="off"
                 />
-                <span class="arrow-icon">
-                  <img src="./src/assets/arrow-down.svg" alt="" />
-                </span>
+                <img src="./src/assets/arrow-down.svg" alt="ícone de seta" id="hour-btn" />
               </section>
+              <ul class="hour-list hidden"></ul>
             </div>
           </div>
         </fieldset>
 
-        <button type="submit" id="btn-schedule">AGENDAR</button>
+        <div class="button-wrapper">
+          <button type="submit" id="btn-schedule">AGENDAR</button>
+        </div>
       </form>
     </dialog>
   </body>

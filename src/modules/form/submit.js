@@ -2,15 +2,12 @@ import dayjs from "dayjs";
 
 const form = document.querySelector("form");
 const filterDate = document.querySelector("#input-date");
-const scheduleDate = document.querySelector("fieldset #input-date");
+const scheduleDate = document.querySelector("fieldset #form-date");
 const today = dayjs(new Date()).format("YYYY-MM-DD");
 
-console.log(filterDate);
-console.log(scheduleDate);
 filterDate.value = today;
 
 scheduleDate.value = today;
-
 
 //Define a data mínima como a data atual.
 filterDate.min = today;

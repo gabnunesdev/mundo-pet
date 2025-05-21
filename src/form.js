@@ -6,14 +6,19 @@ const mainContainer = document.querySelector(".main-container");
 
 btnNew.addEventListener("click", () => {
   modal.showModal();
-  mainContainer.classList.add("blur");
+  mainContainer.classList.toggle("blur");
 });
-
-
 
 btnSchedule.addEventListener("click", () => {
   setTimeout(() => {
     modal.close();
-    mainContainer.classList.remove("blur");
+    mainContainer.classList.toggle("blur");
   }, 1000);
+});
+
+document.addEventListener("keyup", (event) => {
+  if (event.key === "Escape") {
+    modal.close();
+    mainContainer.classList.remove("blur");
+  }
 });

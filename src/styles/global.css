@@ -46,6 +46,7 @@
   --font-label-small: 700 12px/16px "Inter", sans-serif;
 
   --font-link: 500 12px/16px "Inter", sans-serif;
+  --font-input: 400  1rem/1.5 "Inter", sans-serif;
 }
 
 body {
@@ -70,4 +71,9 @@ ul {
 
 strong {
   color: var(--content-primary);
+}
+
+input[type="text"], textarea {
+  color: var(--content-primary);
+  font: var(--font-input);
 }

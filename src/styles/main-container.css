@@ -1,4 +1,4 @@
-.main-container.blur {
+.blur {
   filter: blur(8px);
   transition: filter 0.3s ease;
 }

@@ -1,22 +1,20 @@
-dialog {
-  border: none;
-  padding: 2.5rem;
-  border-radius: 0.75rem;
-  max-width: 29.8125rem;
-  width: 100%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: var(--background-tertiary);
-}
-
 form {
   display: flex;
   flex-direction: column;
-  margin-inline: auto;
   align-items: flex-end;
   gap: 1.75rem;
+
+  border: none;
+  padding: 37.5px 40px 28px 40px;
+  border-radius: 0.75rem;
+
+  width: 29.8125rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  background-color: var(--background-tertiary);
 }
 
 form img {
@@ -59,13 +57,23 @@ fieldset .input-wrapper label {
   color: var(--content-primary);
 }
 
-fieldset .input-wrapper input[type="text"] {
-  all: unset;
+fieldset .input-wrapper input[type="text"],
+textarea {
+  border: none;
+  background: none;
+  outline: none;
 }
 
 fieldset .input-wrapper .input-section textarea {
-  all: unset;
+  width: 100%;
   color: var(--content-primary);
+  resize: none;
+}
+
+fieldset .input-wrapper textarea::placeholder,
+input[type="text"]::placeholder {
+  font: 400 1rem/1.5 "Inter", sans-serif;
+  color: var(--content-secondary);
 }
 
 fieldset .input-wrapper .input-section {
@@ -73,13 +81,12 @@ fieldset .input-wrapper .input-section {
   flex-direction: row;
   padding: 12px;
   align-items: center;
+  width: 100%;
 
   border: 1px solid var(--border-primary);
   border-radius: 0.5rem;
 
   font: 400 1rem/1.5 "Inter", sans-serif;
-
-  position: relative;
 }
 
 fieldset .input-wrapper input[type="text"] {
@@ -87,14 +94,61 @@ fieldset .input-wrapper input[type="text"] {
   color: var(--content-primary);
 }
 
-fieldset .date {
+fieldset .date-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 11.9063rem);
   gap: 1rem;
-  position: relative;
 }
 
-input[type="time"],
+fieldset .date-wrapper .date-section {
+  display: flex;
+  flex-direction: row;
+  padding: 12px;
+  align-items: center;
+  max-width: 100%;
+  height: 50.19px;
+
+  border: 1px solid var(--border-primary);
+  border-radius: 0.5rem;
+
+  font: 400 1rem/1.5 "Inter", sans-serif;
+}
+
+fieldset .date-wrapper .hour-section {
+  display: flex;
+  flex-direction: row;
+  padding: 0.75rem 0.75rem;
+  max-width: 190.5px;
+  align-items: center;
+
+  border: 1px solid var(--border-primary);
+  border-radius: 0.5rem;
+
+  font: 400 1rem/1.5 "Inter", sans-serif;
+}
+
+fieldset .date-wrapper .hour-section input {
+  background: none;
+  border: none;
+  outline: none;
+  margin-left: 0.5rem;
+  width: 100%;
+  font: 400 1rem/1.5 "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+fieldset .hour-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+fieldset .date-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 input[type="date"] {
   background: none;
   border: none;
@@ -102,38 +156,33 @@ input[type="date"] {
   font: 400 1rem/1.5 "Inter", sans-serif;
 }
 
-fieldset .date input[type="time"] {
+fieldset .date-wrapper input[type="date"] {
   margin-left: 0.5rem;
   color: var(--content-secondary);
-}
-
-fieldset .date input[type="date"] {
-  margin-left: 0.5rem;
-  color: var(--content-secondary);
-}
-
-input[type="date"] {
-  width: 100%;
-}
-
-form input[type="time"] {
-  width: 100%;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 0;
+  background-image: url("../assets/arrow-down.svg");
   z-index: 1;
+  width: 20px;
+  height: 20px;
 }
 
-.arrow-icon {
-  position: absolute;
-  max-height: 1.25rem;
+fieldset .hour-section img:nth-child(3) {
+  cursor: pointer;
+}
+
+fieldset .date-section input[type="date"]::-webkit-calendar-picker-indicator {
+  background-image: url("../assets/arrow-down.svg");
+  z-index: 1;
+  position: relative;
   right: 8px;
+  cursor: pointer;
 }
 
-input[type="time"]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-  z-index: 1;
+.date-wrapper label {
+  font: var(--font-label-medium);
+  color: var(--content-primary);
 }
 
 form button {
@@ -150,7 +199,29 @@ form button {
   box-shadow: 0 0 40px 0 rgba(146, 130, 250, 0.3);
 }
 
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
 form button:hover {
   box-shadow: 0 0 40px 0 rgba(146, 130, 250, 0.411);
   transition: 0.3s ease-out;
+}
+
+dialog[open] {
+  animation: fadeInModal 0.3s ease-out forwards;
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hidden {
+  display: none;
 }
