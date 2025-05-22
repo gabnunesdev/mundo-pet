@@ -1,6 +1,7 @@
 .schedule {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: flex-end;
   gap: 0.75rem;
   margin-top: 2rem;
@@ -82,4 +83,34 @@
   color: var(--content-tertiary);
   cursor: pointer;
   justify-self: end;
+}
+
+#btn-newschedule {
+  all: unset;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--content-brand);
+  font: var(--font-label-large);
+  color: #050505;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 40px 0 rgba(146, 130, 250, 0.3);
+  margin-top: 20px;
+}
+
+#btn-newschedule:hover {
+  box-shadow: 0 0 40px 0 rgba(146, 130, 250);
+  transition: 0.3s ease-out;
+}
+
+@media (max-width: 500px) {
+  .schedule .period li {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  #btn-newschedule {
+    margin-top: 2rem;
+    align-self: center;
+  }
 }

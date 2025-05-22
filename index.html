@@ -19,7 +19,7 @@
       </div>
       <div class="container">
         <div class="main">
-          <header>
+          <header class="header">
             <div class="title">
               <h1>Sua agenda</h1>
               <p>
@@ -122,6 +122,9 @@
     <dialog>
       <form>
         <header>
+          <div class="close-btn">
+            <img src="./src/assets/close-button.svg" alt="" />
+          </div>
           <div class="title">
             <h1>Agende um atendimento</h1>
             <p>Preencha os dados do cliente para realizar o agendamento:</p>
@@ -129,82 +132,95 @@
         </header>
 
         <fieldset>
-          <div class="input-wrapper">
-            <label for="tutor-name">Nome do tutor</label>
-            <section class="input-section">
-              <img src="./src/assets/user.svg" alt="Ícone de usuário" />
-              <input
-                type="text"
-                name="tutor"
-                id="tutor-name"
-                placeholder="Helena Souza"
-              />
-            </section>
-          </div>
-
-          <div class="input-wrapper">
-            <label for="pet-name">Nome do pet</label>
-            <section class="input-section">
-              <img src="./src/assets/pet-paw.svg" alt="Ícone de pet" />
-              <input
-                type="text"
-                name="pet"
-                id="pet-name"
-                placeholder="Cheddar"
-              />
-            </section>
-          </div>
-
-          <div class="input-wrapper">
-            <label for="phone">Telefone</label>
-            <section class="input-section">
-              <img src="./src/assets/phone.svg" alt="" />
-              <input
-                type="text"
-                name="phone"
-                id="phone"
-                placeholder="(00) 0 0000-0000"
-              />
-            </section>
-          </div>
-
-          <div class="input-wrapper">
-            <label for="service-description">Descrição do serviço</label>
-            <section class="input-section">
-              <textarea
-                name="service-description"
-                id="service-description"
-                placeholder="Banho e tosa"
-              ></textarea>
-            </section>
-          </div>
-
-          <div class="date-wrapper">
-
-            <div class="date-inner">
-              <label for="form-date">Data</label>
-              <section class="date-section">
-                <img
-                  src="./src/assets/calendar.svg"
-                  alt="Ícone de calendário"
+          <div class="form-wrapper">
+            <div class="input-wrapper">
+              <label for="tutor-name">Nome do tutor</label>
+              <section class="input-section">
+                <img src="./src/assets/user.svg" alt="Ícone de usuário" />
+                <input
+                  type="text"
+                  name="tutor"
+                  id="tutor-name"
+                  placeholder="Helena Souza"
                 />
-                <input type="date" name="date" id="form-date" />
               </section>
             </div>
 
-            <div class="hour-inner">
-              <label for="input-hour">Hora</label>
-              <section class="hour-section">
-                <img src="./src/assets/clock.svg" alt="Ícone de relógio" />
+            <div class="input-wrapper">
+              <label for="pet-name">Nome do pet</label>
+              <section class="input-section">
+                <img src="./src/assets/pet-paw.svg" alt="Ícone de pet" />
                 <input
                   type="text"
-                  id="input-section"
-                  placeholder="12:00"
-                  autocomplete="off"
+                  name="pet"
+                  id="pet-name"
+                  placeholder="Cheddar"
                 />
-                <img src="./src/assets/arrow-down.svg" alt="ícone de seta" id="hour-btn" />
               </section>
-              <ul class="hour-list hidden"></ul>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="phone">Telefone</label>
+              <section class="input-section">
+                <img src="./src/assets/phone.svg" alt="" />
+                <input
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  placeholder="(00) 0 0000-0000"
+                />
+              </section>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="service-description">Descrição do serviço</label>
+              <section class="input-section">
+                <textarea
+                  name="service-description"
+                  id="service-description"
+                  placeholder="Banho e tosa"
+                ></textarea>
+              </section>
+            </div>
+
+            <div class="date-wrapper">
+              <div class="date-inner">
+                <label for="form-date">Data</label>
+                <section class="date-section">
+                  <img
+                    src="./src/assets/calendar.svg"
+                    alt="Ícone de calendário"
+                  />
+                  <input type="date" name="date" id="form-date" />
+                </section>
+              </div>
+
+              <div class="hour-inner">
+                <label for="input-hour">Hora</label>
+                <section class="hour-section">
+                  <img src="./src/assets/clock.svg" alt="Ícone de relógio" />
+                  <input
+                    type="text"
+                    id="input-section"
+                    placeholder="12:00"
+                    autocomplete="off"
+                  />
+                  <img
+                    src="./src/assets/arrow-down.svg"
+                    alt="ícone de seta"
+                    id="hour-btn"
+                  />
+                </section>
+                <div class="drop-menu hidden">
+                  <ul id="hour-list">
+                    <!-- Exemplo  
+
+                  <li data-period="morning" class="hour-period">Manhã</li>
+                  <li class="hour-available">09:00</li>
+                  <li class="hour-unavailable">10:00</li>
+                  --></ul>
+                </div>
+              </div>
             </div>
           </div>
         </fieldset>

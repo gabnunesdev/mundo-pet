@@ -8,7 +8,8 @@ form {
   padding: 37.5px 40px 28px 40px;
   border-radius: 0.75rem;
 
-  width: 29.8125rem;
+  max-width: 29.8125rem;
+
   position: fixed;
   top: 50%;
   left: 50%;
@@ -17,10 +18,17 @@ form {
   background-color: var(--background-tertiary);
 }
 
-form img {
+form fieldset img {
   width: fit-content;
   max-width: 20px;
   height: auto;
+}
+
+form header .close-btn {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  cursor: pointer;
 }
 
 form header .title {
@@ -118,7 +126,6 @@ fieldset .date-wrapper .hour-section {
   display: flex;
   flex-direction: row;
   padding: 0.75rem 0.75rem;
-  max-width: 190.5px;
   align-items: center;
 
   border: 1px solid var(--border-primary);
@@ -159,13 +166,6 @@ input[type="date"] {
 fieldset .date-wrapper input[type="date"] {
   margin-left: 0.5rem;
   color: var(--content-secondary);
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-  background-image: url("../assets/arrow-down.svg");
-  z-index: 1;
-  width: 20px;
-  height: 20px;
 }
 
 fieldset .hour-section img:nth-child(3) {
@@ -224,4 +224,146 @@ dialog[open] {
 
 .hidden {
   display: none;
+  padding: 0;
+  list-style: none;
+}
+
+/* Estilos opcionais para a lista */
+.hidden li {
+  color: var(--content-primary);
+}
+
+/* Adicionando efeito de transição suave */
+.hidden {
+  transition: display 0.3s ease-in-out;
+}
+
+fieldset .drop-menu {
+  position: absolute;
+  top: 32%;
+  right: 48.5%;
+}
+
+fieldset .drop-menu::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  position: absolute;
+  background-color: #1c1c24;
+  z-index: 1;
+  left: 159px;
+  top: 282px;
+}
+
+fieldset .drop-menu ul {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  position: absolute;
+  z-index: 1;
+
+  width: 11.9063rem;
+  border-radius: 0.25rem;
+
+  background-color: #1c1c24;
+  padding: 8px;
+}
+
+fieldset .drop-menu ul li {
+  font: 400 14px "Inter", sans-serif;
+  color: var(--content-primary);
+  line-height: 1rem;
+  padding: 3px;
+  border: 1px solid var(--border-primary);
+  width: 3rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+fieldset .drop-menu ul li.hour-available {
+  background-color: var(--background-primary);
+}
+
+fieldset .drop-menu ul li.hour-available:hover {
+  border-color: var(--border-brand);
+  color: var(--content-brand);
+  transition: ease-in-out 0.15s;
+}
+
+fieldset .drop-menu ul li.hour-unavailable {
+  background-color: var(--background-tertiary);
+  color: #666666;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+fieldset .drop-menu ul li.hour-period {
+  width: 100%;
+  border: none;
+  cursor: initial;
+}
+
+fieldset .drop-menu ul li.hour-selected {
+  border-color: var(--border-brand);
+  color: var(--content-brand);
+}
+
+@media (max-width: 500px) {
+  form {
+    max-width: 21.875rem;
+    padding: 2.5rem 1.25rem;
+  }
+
+  fieldset {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  fieldset .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    max-width: 19.375rem;
+  }
+
+  fieldset .date-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 11.9063rem;
+  }
+
+  fieldset .date-wrapper .date-section {
+    width: 17.375rem;
+  }
+
+  fieldset .date-section input[type="date"] {
+    width: 17.375rem;
+  }
+
+  fieldset .date-section input[type="date"]::-webkit-calendar-picker-indicator {
+    background-image: url("../assets/arrow-down.svg");
+    z-index: 1;
+    position: relative;
+    right: 0px;
+    cursor: pointer;
+  }
+
+  fieldset .date-wrapper .hour-inner .hour-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 17.375rem;
+  }
+
+  fieldset .drop-menu {
+    position: absolute;
+    top: 45.5%;
+    right: 66.5%;
+  }
 }
