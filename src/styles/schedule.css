@@ -85,6 +85,10 @@
   justify-self: end;
 }
 
+.schedule .period li span:nth-child(3):hover {
+  color: var(--content-brand);
+}
+
 #btn-newschedule {
   all: unset;
   cursor: pointer;

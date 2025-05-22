@@ -54,6 +54,12 @@ fieldset {
   border: none;
 }
 
+fieldset .form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 fieldset .input-wrapper {
   display: flex;
   flex-direction: column;
