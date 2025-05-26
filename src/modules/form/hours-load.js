@@ -1,10 +1,12 @@
 import dayjs from "dayjs";
-import {hoursClick} from "../form/hours-click.js";
+import { hoursClick } from "../form/hours-click.js";
 import { openingHours } from "../../utils/opening-hours.js";
 
 const hours = document.getElementById("hour-list");
 
 export function hoursLoad({ date }) {
+  //Limpa a lista de horários.
+  hours.innerHTML = "";
   const opening = openingHours.map((hour) => {
     //Recupera a hora
     const [scheduleHour] = hour.split(":");

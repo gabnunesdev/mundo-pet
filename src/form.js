@@ -12,14 +12,6 @@ btnNew.addEventListener("click", () => {
   mainContainer.classList.toggle("blur");
 });
 
-btnSchedule.addEventListener("click", () => {
-  setTimeout(() => {
-    alert("Agendamento realizado com sucesso!");
-    modal.close();
-    mainContainer.classList.toggle("blur");
-  }, 1000);
-});
-
 document.addEventListener("keyup", (event) => {
   if (event.key === "Escape") {
     modal.close();
@@ -40,4 +32,31 @@ hourBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
   modal.close();
   mainContainer.classList.toggle("blur");
+});
+
+function insertHour() {
+  const hourList = document.querySelector("#hour-list");
+
+  hourList.addEventListener("click", (event) => {
+    const hour = event.target.innerText;
+    if (event.target.classList.contains("hour-available")) {
+      const inputHour = document.getElementById("input-hour");
+      inputHour.value = hour;
+    }
+  });
+}
+
+insertHour();
+
+function maskPhone(value) {
+  return value
+    .replace(/\D/g, "")
+    .replace(/^(\d{2})(\d)/g, "($1) $2")
+    .replace(/(\d)(\d{4})$/, "$1-$2");
+}
+
+const phoneInput = document.getElementById("phone");
+
+phoneInput.addEventListener("input", (e) => {
+  e.target.value = maskPhone(e.target.value);
 });
