@@ -171,7 +171,7 @@ input[type="date"] {
 
 fieldset .date-wrapper input[type="date"] {
   margin-left: 0.5rem;
-  color: var(--content-secondary);
+  color: var(--content-primary);
 }
 
 fieldset .hour-section img:nth-child(3) {
@@ -246,7 +246,7 @@ dialog[open] {
 
 fieldset .drop-menu {
   position: absolute;
-  top: 32%;
+  top: 37%;
   right: 48.5%;
 }
 
@@ -318,7 +318,7 @@ fieldset .drop-menu ul li.hour-selected {
   color: var(--content-brand);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 630px) {
   form {
     max-width: 21.875rem;
     padding: 2.5rem 1.25rem;

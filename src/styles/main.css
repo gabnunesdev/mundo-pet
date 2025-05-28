@@ -47,7 +47,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 630px) {
   .main .header {
     display: flex;
     flex-direction: column;

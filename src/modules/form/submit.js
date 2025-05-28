@@ -1,33 +1,37 @@
 import dayjs from "dayjs";
 
-import { scheduleNew } from "../../services/schedule-new";
+import { scheduleNew } from "../../services/schedule-new.js";
+
+import { schedulesDay } from "../schedules/load.js";
+
+import { clearForm } from "../../form.js";
 
 const form = document.querySelector("form");
-const filterDate = document.querySelector("#input-date");
-const scheduleDate = document.querySelector("fieldset #form-date");
+const filterDate = document.getElementById("filter-date");
+const scheduleDate = document.getElementById("form-date");
 const today = dayjs(new Date()).format("YYYY-MM-DD");
 
 //Selecionando os inputs
 const tutor = document.getElementById("tutor-name");
 const pet = document.getElementById("pet-name");
 const service = document.getElementById("service-description");
+const phone = document.getElementById("phone");
 
 filterDate.value = today;
-
 scheduleDate.value = today;
 
 //Define a data mínima como a data atual.
 filterDate.min = today;
 scheduleDate.min = today;
 
-form.onsubmit = (event) => {
+form.onsubmit = async (event) => {
   //Previne o comportamento padrão do formulário
   event.preventDefault();
   try {
     //Recupera o nome do tutor eliminando espaços
     const tutorName = tutor.value.trim();
     if (!tutorName) {
-      return alert("Informe o nome do cliente!");
+      return alert("Informe o nome do tutor!");
     }
 
     const petName = pet.value.trim();
@@ -51,18 +55,25 @@ form.onsubmit = (event) => {
 
     //Insere a hora na data
     const when = dayjs(scheduleDate.value).add(hour, "hour");
-    console.log(when);
+    console.log(tutorName);
 
     //Gera um ID
     const id = new Date().getTime();
 
-    return {
+    await scheduleNew({
       id,
       tutorName,
       petName,
       description,
       when,
-    };
+    });
+
+    await schedulesDay();
+
+    //Limpa os inputs
+    clearForm(tutor, pet, service, phone);
+    const list = document.querySelector(".hidden");
+    list.style.display = "none";
   } catch (error) {
     console.log(error);
   }

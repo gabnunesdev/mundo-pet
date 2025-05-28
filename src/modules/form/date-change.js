@@ -1,8 +1,11 @@
-import { schedulesDay } from "../schedules/load";
+import { schedulesDay } from "../schedules/load.js";
+import { hoursLoad } from "../form/hours-load.js";
 
-//Seleciona o input de data
-const scheduleDate = document.querySelector("fieldset #form-date");
+const filterDate = document.querySelector("#filter-date");
+const formDate = document.querySelector("#form-date");
 
-//Recarrega a lista de horários quando o input de data mudar
+// Atualiza a lista de agendamentos
+filterDate.onchange = () => schedulesDay(filterDate.value);
 
-scheduleDate.onchange = () => schedulesDay();
+// Atualiza as horas disponíveis no formulário
+formDate.onchange = () => hoursLoad(formDate.value);

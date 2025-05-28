@@ -60,3 +60,11 @@ const phoneInput = document.getElementById("phone");
 phoneInput.addEventListener("input", (e) => {
   e.target.value = maskPhone(e.target.value);
 });
+
+export function clearForm(...items) {
+  items.forEach((item) => {
+    if (item && item.value !== undefined) {
+      item.value = "";
+    }
+  });
+}

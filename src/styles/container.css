@@ -9,7 +9,7 @@
   position: relative;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 630px) {
   .container {
     padding-top: 0.5rem;
     padding-inline: 1.25rem;

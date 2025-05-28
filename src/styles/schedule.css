@@ -106,7 +106,7 @@
   transition: 0.3s ease-out;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 630px) {
   .schedule .period li {
     display: grid;
     grid-template-columns: 1fr;
