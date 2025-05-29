@@ -18,7 +18,6 @@ const service = document.getElementById("service-description");
 const phone = document.getElementById("phone");
 
 filterDate.value = today;
-scheduleDate.value = today;
 
 //Define a data mínima como a data atual.
 filterDate.min = today;
@@ -58,10 +57,8 @@ form.onsubmit = async (event) => {
     console.log(tutorName);
 
     //Gera um ID
-    const id = new Date().getTime();
 
     await scheduleNew({
-      id,
       tutorName,
       petName,
       description,

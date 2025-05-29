@@ -1,20 +1,14 @@
 import { apiConfig } from "./api-config";
 
-export async function scheduleNew({
-  id,
-  tutorName,
-  petName,
-  description,
-  when,
-}) {
+export async function scheduleNew({ tutorName, petName, description, when }) {
   try {
     //Fazendo a requisição para enviar os dados do agendamento
-    await fetch(`${apiConfig.baseUrl}/schedules`, {
+    await fetch(`${apiConfig.baseURL}/schedules`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ id, tutorName, petName, description, when }),
+      body: JSON.stringify({ tutorName, petName, description, when }),
     });
 
     alert("Agendamento realizado com sucesso!");

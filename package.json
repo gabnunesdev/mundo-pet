@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "dayjs": "^1.11.13",
-    "json-server": "^1.0.0-beta.3"
+    "json-server": "^1.0.0-beta.3",
+    "nanoid": "^5.1.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.27.1",
