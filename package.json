@@ -1,11 +1,15 @@
 {
   "name": "mundopet",
+  "version": "1.0.0",
   "description": "Aplicação Web para agendamento de serviços de petshop",
   "author": "Gabriel Nunes",
+  "license": "MIT",
+  "homepage": "https://gabnunesdev.github.io/mundo-pet",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack serve",
-    "server": "json-server --watch server.json --port 3333"
+    "dev": "webpack serve --mode development --config webpack.config.js",
+    "build": "webpack --mode production --config webpack.config.js",
+    "server": "json-server --watch server.json --port 5000",
+    "deploy": "npm run build && git add docs && git commit -m 'deploy' && git push"
   },
   "dependencies": {
     "dayjs": "^1.11.13",
