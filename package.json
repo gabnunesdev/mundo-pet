@@ -7,9 +7,9 @@
   "homepage": "https://gabnunesdev.github.io/mundo-pet",
   "scripts": {
     "dev": "webpack serve --mode development --config webpack.config.js",
-    "build": "webpack --mode production --config webpack.config.js",
+    "build": "webpack --mode development --config webpack.config.js",
     "server": "json-server --watch server.json --port 5000",
-    "deploy": "npm run build && git add docs && git commit -m 'deploy' && git push"
+    "deploy": "npm run build && git add dist && git commit -m 'deploy' && git push"
   },
   "dependencies": {
     "dayjs": "^1.11.13",
