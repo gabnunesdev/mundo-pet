@@ -1,3 +1,15 @@
+dialog {
+  padding: 0;
+  border: none;
+  margin-inline: auto;
+  margin-block: auto;
+  border-radius: 12px;
+  background-color: var(--background-tertiary);
+
+  max-width: 90%;
+  overflow-y: auto;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -9,12 +21,8 @@ form {
   border-radius: 0.75rem;
 
   max-width: 29.8125rem;
-
-  position: fixed;
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
+  width: 100%;
+  overflow-y: auto;
   background-color: var(--background-tertiary);
 }
 
@@ -321,7 +329,9 @@ fieldset .drop-menu ul li.hour-selected {
 @media (max-width: 630px) {
   form {
     max-width: 21.875rem;
-    padding: 2.5rem 1.25rem;
+
+    min-height: 80svh;
+    overflow-y: auto;
   }
 
   fieldset {

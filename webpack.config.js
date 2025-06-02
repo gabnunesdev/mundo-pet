@@ -17,9 +17,6 @@ module.exports = {
   },
 
   devServer: {
-    static: {
-      directory: path.join(__dirname, "docs"),
-    },
     port: 3000,
     open: true,
     hot: true, // Ativa Hot Module Replacement
@@ -29,13 +26,13 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./index.html"),
-      favicon: path.resolve("src", "assets", "logo.svg"),
+      favicon: path.resolve("src", "assets", "./logo.svg"),
     }),
 
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "src/assets"),
+          from: path.resolve(__dirname, "src", "assets"),
           to: path.resolve(__dirname, "docs", "src", "assets"),
         },
       ],
