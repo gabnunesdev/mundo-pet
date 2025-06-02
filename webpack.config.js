@@ -11,7 +11,7 @@ module.exports = {
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "docs"),
-    publicPath: "/mundo-pet/",
+    publicPath: "./",
 
     clean: true, // limpa a pasta docs antes de gerar o build
   },
